@@ -11,12 +11,11 @@
 }
 ```
 
-### 2. `react-axe` for auditing
+### 2. use `react-axe` library for auditing 
 
 ```js
 // initialize react-axe before rendering the <App/>
 if(process.env !== 'PRODUCTION'){
-
 
   const axe = requre('react-axe');
   const axeConfig = {
