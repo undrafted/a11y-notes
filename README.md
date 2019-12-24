@@ -44,3 +44,24 @@ if(process.env !== 'PRODUCTION'){
 
 ### 5. define landmark regions (roles) 
 - [a11yproject resource](https://a11yproject.com/posts/getting-started-aria/)
+
+### 6. heading levels should convey structure of the page
+- strictly use `h` tags for structure
+- dont hesitate to use `p` and `span` tags for everything else
+
+### 7. accessible labels
+- wrap `input` elements with `label` if possible
+- if not, use `for` and `id`
+- more example: 
+  instead of 
+  ```js
+  <Button>< back</Button>
+  ```
+
+  do: 
+  ```js
+  <Button aria-label="Go back to home page"><- back</Button>
+  ```
+
+### 7. group input elements that are connected with each other (radio, select, etc)
+- wrap in `fieldset`, add appropriate aria, etc
