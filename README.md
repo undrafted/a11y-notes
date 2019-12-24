@@ -72,7 +72,8 @@ if(process.env !== 'PRODUCTION'){
   do:
   ```js
   <div aria-labelledby="not-logged-in log-in">
-     <p id="not-logged-in">You are not logged in.</p><Link to="/login" id="log-in">Log in now</Link>
+     <p id="not-logged-in">You are not logged in.</p>
+     <Link to="/login" id="log-in">Log in now</Link>
   </div>
  
   ```
