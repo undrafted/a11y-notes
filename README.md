@@ -78,11 +78,12 @@ if(process.env !== 'PRODUCTION'){
  
   ```
 
-### 7. group input elements that are connected with each other (radio, select, etc)
+### 8. group input elements that are connected with each other (radio, select, etc)
 - wrap in `fieldset`, add appropriate aria, etc
 
-### 7. add accessible description to elements
+### 9. add accessible description to elements
 - use `aria-describedby` in the `input` element pointing to the `id`s of the description elements. Example:
+
   ```js
   <input type="password" aria-describedby="password-requirement"/>
   <span id="password-requirement>Password must be at least 8 characters</span>
