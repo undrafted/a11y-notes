@@ -87,3 +87,7 @@ if(process.env !== 'PRODUCTION'){
   <input type="password" aria-describedby="password-requirement"/>
   <span id="password-requirement>Password must be at least 8 characters</span>
   ```
+  
+### 10. use meaningful img `alt` attributes
+- don't hesitate to write `alt=""` if the image is decorative, so the screenreader can just skip the image
+- when adding `alt` text, always consider the functionality the image provides, and if the information you would add for the `alt` is already present in another component next to it anyway (e.g. titles). Otherwise it would just be noise and would cause more harm than good.
