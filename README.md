@@ -1,6 +1,6 @@
 # a11y-notes
 
-### 1. add eslint-plugin-jsx-a11y
+### 1. add `eslint-plugin-jsx-a11y`
 ```js
 // example .eslintrc.json
 {
@@ -35,7 +35,12 @@ if(process.env !== 'PRODUCTION'){
  ReactDOM.render(<App/>, appId);
 ```
 
-### useful browser plugins for auditing
+### 3. useful browser plugins for auditing
 - `axe`
 - `tota11y`
 - `high contrast`
+
+### 4. use your machine's voice-over a11y feature and try to navigate your webapp
+
+### 5. define landmark regions (roles) 
+- [a11yproject resource](https://a11yproject.com/posts/getting-started-aria/)
