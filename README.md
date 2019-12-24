@@ -62,6 +62,20 @@ if(process.env !== 'PRODUCTION'){
   ```js
   <Button aria-label="Go back to home page"><- back</Button>
   ```
+- `aria-label` should be specific
+- group connected parts of the page together so the screenreader can read them together. Example:
+  
+  instead of
+  ```js
+  <p>You are not logged in. <Link to="/login">Log in now</Login></p> 
+  ```
+  do:
+  ```js
+  <div aria-labelledby="not-logged-in log-in">
+     <p id="not-logged-in">You are not logged in.</p><Link to="/login" id="log-in">Log in now</Link>
+  </div>
+ 
+  ```
 
 ### 7. group input elements that are connected with each other (radio, select, etc)
 - wrap in `fieldset`, add appropriate aria, etc
