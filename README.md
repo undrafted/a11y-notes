@@ -117,3 +117,5 @@ if(process.env !== 'PRODUCTION'){
 
   ```
   
+  ### 12. Approriately set focus on each page load
+  - check page focus using `document.activeElement` upon navigation
