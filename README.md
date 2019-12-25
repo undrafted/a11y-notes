@@ -119,3 +119,11 @@ if(process.env !== 'PRODUCTION'){
   
   ### 12. Approriately set focus on each page load
   - check page focus using `document.activeElement` upon navigation
+
+### 13. use html5 sectioning elements if applicable, example:
+  ```js
+  // instead of 
+  <div role="navigation">...</div>
+  // do:
+  <nav>...</nav>
+  ```
