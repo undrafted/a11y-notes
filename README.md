@@ -91,3 +91,29 @@ if(process.env !== 'PRODUCTION'){
 ### 10. use meaningful img `alt` attributes
 - don't hesitate to write `alt=""` if the image is decorative, so the screenreader can just skip the image
 - when adding `alt` text, always consider the functionality the image provides, and if the information you would add for the `alt` is already present in another component next to it anyway (e.g. titles). Otherwise it would just be noise (and repetition) and would cause more harm than good.
+
+### 11. define live region to ensure dynamic changes are announced to screen readers using arias (e.g submitting a form and getting an error feedback)
+
+  - note that live regions should already be in the dom upon first render, so that screen readers can actually listen for their updates
+  - note the aria-live assertive interrupts announcements, even other assertive elements before it!
+  ```js
+  // aria-live accepts two values: polite or assertive
+  // polite waits for the screen reader to complete whatever it is reading before announcing the change
+  // assertive will interrupt the screenreader to announce the change
+  
+  // aria-atomic tells the reader to present the element as a whole 
+  // anytime any change is made even if only a part of the content changed
+  
+  // aria-relevant
+  // accepts 'additions' 'removals' 'text' or all of them
+  // additions - if any nodes are added
+  // removals - if any nodes are removed
+  // text - text change
+  
+  // values for aria-atomic and aria-relevant below are default values (no need to add, just added for explanation)
+  <div id="error-span" aria-live="polite" aria-atomic="true" aria-relevant="additions text">
+    Please enter a username.
+  </div>
+
+  ```
+  
